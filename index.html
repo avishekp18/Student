@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333333;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(to right, #6c63ff, #ff6584);
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    header .btn {
+      background-color: #ff6584;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 6px 15px rgba(255, 101, 132, 0.2);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header .btn:hover {
+      background-color: #ff4d6b;
+      box-shadow: 0 8px 20px rgba(255, 101, 132, 0.3);
+    }
+
+    /* Feature Cards Styles */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      width: 100%;
+      margin: 60px auto;
+    }
+
+    .feature-card {
+      background-color: white;
+      border-radius: 20px;
+      text-align: center;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .feature-card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.1));
+    }
+
+    .feature-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #6c63ff;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #555555;
+      margin-bottom: 20px;
+    }
+
+    .feature-card a {
+      background-color: #6c63ff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card a:hover {
+      background-color: #5b54e6;
+      box-shadow: 0 6px 15px rgba(108, 99, 255, 0.2);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #2e3440;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 60px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    footer a {
+      color: #ff6584;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #ff4d6b;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+  <header class="hero">
+    <div class="container">
+      <h1>Welcome to Student Management System</h1>
+      <p>Your one-stop solution for managing student data.</p>
+      <a href="Features.html" class="btn">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mt-5">
+    <section class="features row">
+      <div class="col-lg-4 col-md-6 feature-card">
+        <img src="https://www.svgrepo.com/show/308044/registration-desk-register-records-office.svg" alt="Student Registration">
+        <h3>Student Registration</h3>
+        <p>Register new students and manage their profiles efficiently.</p>
+        <a href="Reg.html" class="btn btn-primary">Register Now</a>
+      </div>
+      <div class="col-lg-4 col-md-6 feature-card">
+        <img src="https://www.svgrepo.com/show/501100/assignment.svg" alt="Course Management">
+        <h3>Course Management</h3>
+        <p>Create and manage courses, assign instructors, and track course details.</p>
+        <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+      </div>
+      <div class="col-lg-4 col-md-6 feature-card">
+        <img src="https://www.svgrepo.com/show/399598/registration.svg" alt="Attendance Tracking">
+        <h3>Attendance Tracking</h3>
+        <p>Track attendance records and view detailed attendance history.</p>
+        <a href="Features.html" class="btn btn-primary">Track Attendance</a>
+      </div>
+      <div class="col-lg-4 col-md-6 feature-card">
+        <img src="https://www.svgrepo.com/show/501211/gradebook-export.svg" alt="Grade Management">
+        <h3>Grade Management</h3>
+        <p>Record and manage student grades with ease. View and export grade reports.</p>
+        <a href="Features.html" class="btn btn-primary">Manage Grades</a>
+      </div>
+      <div class="col-lg-4 col-md-6 feature-card">
+        <img src="https://www.svgrepo.com/show/274412/documents-copy.svg" alt="Reports Generation">
+        <h3>Reports Generation</h3>
+        <p>Generate comprehensive reports on students, attendance, and grades.</p>
+        <a href="Features.html" class="btn btn-primary">Generate Reports</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Student Management System. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+
+    document.addEventListener("click", function(event) {
+      const sidebar = document.getElementById("sidebar");
+      const menuButton = document.querySelector(".menu-button");
+      if (!sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+        sidebar.classList.remove("active");
+      }
+    });
+  </script>
+  <!-- <script type="module">
+    import nav1 from "./nav1.js";
+    document.querySelector('#nav').innerHTML = nav1;
+  </script> -->
+</body>
+</html>

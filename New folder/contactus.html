@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Student Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding-top: 80px; /* Space for the fixed header */
+            color: #333;
+        }
+        .navbar {
+            background-color: #eaedf1;
+            padding: 15px 0;
+            position: fixed;
+            top: 0; /* Ensure the navbar is at the top */
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 20px; /* Space between nav items */
+        }
+
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0; /* Remove right margin for the last item */
+        }
+
+        .navbar-nav .btn {
+            margin-left: 20px; /* Space between the nav items and the login button */
+        }
+
+        .navbar-nav .dropdown-menu {
+            background-color: #ffffff; /* Background color of dropdown */
+            border-radius: 0.5rem; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: all 0.3s ease; /* Transition effect */
+        }
+
+        .navbar-nav .dropdown-item {
+            padding: 10px 20px; /* Padding for dropdown items */
+            color: #333; /* Text color */
+        }
+
+        .navbar-nav .dropdown-item:hover {
+            background-color: #007bff; /* Background color on hover */
+            color: white; /* Text color on hover */
+        }
+
+        .navbar-nav .dropdown-item:focus {
+            outline: none; /* Remove outline on focus */
+            background-color: #0056b3; /* Darker blue on focus */
+            color: white; /* Text color on focus */
+        }
+
+
+        .contact-section {
+            padding: 60px 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin-top: 20px; /* Added margin to account for fixed header */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4e54c8;
+        }
+
+        .contact-info {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info img {
+            width: 100%; /* Ensures image fills the container */
+            height: 100%; /* Set height to fill the container */
+            object-fit: cover; /* Cover the area while maintaining aspect ratio */
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .btn-secondary {
+            background-color: #4e54c8;
+            border-color: #4e54c8;
+            width: 100%;
+            height:50px;
+            box-sizing: border-box;
+            transition: background-color 0.3s, border-color 0.3s;
+            
+        }
+
+        .btn-secondary:hover {
+            background-color: #8f94fb;
+            border-color: #8f94fb;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 40px 20px;
+            }
+
+            .contact-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="KIIT-Full-Logo-Left.png" alt="Logo" width="380" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="register.html">Register Student</a>
+                            <a class="dropdown-item" href="courses.html">Manage Courses</a>
+                            <a class="dropdown-item" href="attendance.html">Attendance</a>
+                            <a class="dropdown-item" href="grades.html">Grades</a>
+                            <a class="dropdown-item" href="reports.html">Reports</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ml-2" onclick="window.location.href='login.html'">Log
+                            In</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="container contact-section">
+        <div class="row justify-content-center">
+            <div class="col-md-6 contact-form">
+                <h2>Contact us</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter the subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Type your message here" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-5 contact-info">
+                <img src="https://c0.wallpaperflare.com/preview/960/830/338/chart-graph-business-finance.jpg" alt="Contact Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Student Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
